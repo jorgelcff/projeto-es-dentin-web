@@ -8,7 +8,7 @@ export default ({ toggleMenu, toggleSearch }) => (
       onClick={toggleMenu}
     ></i>
     <NavLink className="navbar-brand" to="/">
-      ZeroSlope v2
+      <img src="https://i.imgur.com/GqhnLR4_d.webp?maxwidth=760&fidelity=grand" alt="logo" width="200" height="auto" />   
     </NavLink>
     <ul className="navbar-nav">
       <li className="nav-item">
