@@ -2,13 +2,13 @@
 import axios from 'axios';
 
 class GenericService {
-  constructor(baseUrl) {
-    this.baseUrl = baseUrl;
+  constructor() {
+    this.baseUrl = 'https://dentin.fly.dev/';
   }
 
-  async get(endpoint) {
+  async get(endpoint, params) {
     try {
-      const response = await axios.get(`${this.baseUrl}/${endpoint}`);
+      const response = await axios.get(`${this.baseUrl}/${endpoint}`, params);
       return response.data;
     } catch (error) {
       console.error(error);
@@ -36,9 +36,9 @@ class GenericService {
     }
   }
 
-  async delete(endpoint) {
+  async delete(endpoint, id) {
     try {
-      const response = await axios.delete(`${this.baseUrl}/${endpoint}`);
+      const response = await axios.delete(`${this.baseUrl}/${endpoint}`, id);
       return response.data;
     } catch (error) {
       console.error(error);
