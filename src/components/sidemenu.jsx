@@ -31,17 +31,11 @@ export default ({ toggleMenu }) => {
         </a>
       </div>
     </div>
-    <NavLink className="link" to="/sample" onClick={toggleMenu}>
-      Sample Page
+    <NavLink className="link" to="/home" onClick={toggleMenu}>
+      Home
     </NavLink>
     <NavLink className="link" to="/consultas" onClick={toggleMenu}>
       Consultas
-    </NavLink>
-    <NavLink className="link" to="/horarios" onClick={toggleMenu}>
-      Horarios
-    </NavLink>
-    <NavLink className="link" to="/" onClick={toggleMenu}>
-      Page 3
     </NavLink>
   </div>
 )};

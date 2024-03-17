@@ -1,55 +1,51 @@
 import React, { Fragment } from "react";
 
-export default () => (
+const HomePageDentistas = () => (
   <Fragment>
     <ol className="breadcrumb">
       <li className="breadcrumb-item active">Home</li>
     </ol>
     <div className="jumbotron">
-      <h1 className="display-3">Hello, world!</h1>
+      <h1 className="display-3">Bem-vindo, Dentista!</h1>
       <p className="lead">
-        This is a simple hero unit, a simple jumbotron-style component for
-        calling extra attention to featured content or information.
+        Esta é a página inicial da plataforma DenTIn para dentistas.
       </p>
       <hr className="my-4" />
       <p>
-        It uses utility classes for typography and spacing to space content out
-        within the larger container.
+        A plataforma oferece acompanhamento de consultas, pacientes e horários,
+        além de fornecer relatórios mensais detalhados sobre os pacientes atendidos.
       </p>
     </div>
     <div className="row">
       <div className="col-lg-4 col-md-4 col-sm-12">
         <div className="card bg-secondary mb-3">
-          <div className="card-header">Item 3</div>
+          <div className="card-header">Acompanhamento de Consultas</div>
           <div className="card-body">
-            <h4 className="card-title">Some title</h4>
+            <h4 className="card-title">Consultas Agendadas</h4>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Visualize e gerencie todas as consultas agendadas com seus pacientes.
             </p>
           </div>
         </div>
       </div>
       <div className="col-lg-4 col-md-4 col-sm-12">
         <div className="card bg-secondary mb-3">
-          <div className="card-header">Item 2</div>
+          <div className="card-header">Acompanhamento de Pacientes</div>
           <div className="card-body">
-            <h4 className="card-title">Some title</h4>
+            <h4 className="card-title">Histórico de Pacientes</h4>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Acesse o histórico completo de todos os seus pacientes e suas consultas anteriores.
             </p>
           </div>
         </div>
       </div>
       <div className="col-lg-4 col-md-4 col-sm-12">
         <div className="card bg-secondary mb-3">
-          <div className="card-header">Item 3</div>
+          <div className="card-header">Relatórios Mensais</div>
           <div className="card-body">
-            <h4 className="card-title">Some title</h4>
+            <h4 className="card-title">Relatórios Detalhados</h4>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Receba relatórios mensais detalhados sobre o desempenho e a saúde bucal de seus pacientes.
             </p>
           </div>
         </div>
@@ -57,3 +53,5 @@ export default () => (
     </div>
   </Fragment>
 );
+
+export default HomePageDentistas;
