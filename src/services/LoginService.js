@@ -4,7 +4,7 @@ class LoginService {
   constructor() {
     this.loggedIn = false;
     this.axios = axios.create({
-      baseURL: "http://localhost:5500/",
+      baseURL: "https://dentin.fly.dev/",
       headers: {
         "Content-Type": "application/json",
         'mode': 'no-cors'
