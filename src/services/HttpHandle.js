@@ -4,7 +4,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 export class HttpHandle {
   constructor() {
     this.axios = axios.create({
-      //baseURL: "https://dummyjson.com/",
       baseURL: "https://dentin.fly.dev",
       headers: {
         "Content-Type": "application/json",
