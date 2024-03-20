@@ -10,6 +10,7 @@ import Modal from "@mui/material/Modal";
 import Backdrop from "@mui/material/Backdrop";
 import Fade from "@mui/material/Fade";
 import { DentistaService } from "../services/DentistaService";
+import toast from 'react-hot-toast';
 
 const ConsultaCard = ({
   paciente,
@@ -218,7 +219,7 @@ const ConsultasPage = () => {
 
       setConsultas(response);
     } catch (error) {
-      console.log(error);
+     toast.error('Erro ao buscar consultas!');
     }
   };
 
