@@ -5,6 +5,10 @@ import { Provider } from "react-redux";
 import Layout from "./components/layout";
 import Routes from "./routes";
 import Login from "./pages/login";
+
+import { Switch, Route } from "react-router";
+
+import ConditionsTerms from "./pages/conditionsTerms";
 import { Toaster } from "react-hot-toast";
 import store from "./store";
 
@@ -32,7 +36,10 @@ class App extends Component {
               <Routes />
             </Layout>
           ) : (
-            <Login />
+            <Switch >
+              <Route path="/conditionsTerms" component={ConditionsTerms} />
+              <Route path="/" component={Login} />
+            </Switch>
           )}
         </BrowserRouter>
       </Provider>
