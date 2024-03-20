@@ -1,35 +1,53 @@
 import axios from "axios";
 
 class LoginService {
+  constructor() {
+    this.loggedIn = false;
+    this.axios = axios.create({
+      baseURL: "http://localhost:5500/",
+      headers: {
+        "Content-Type": "application/json",
+        'mode': 'no-cors'
+      },
+    });
+  }
 
-    static async login(username, password) {
-      try {
-        const response = await axios.post("https://dummyjson.com/auth/login", {
-          username,
-          password
-        });
+  async login(username, password) {
+    const body = {
+      email: username,
+      senha: password,
+      plataforma: "web",
+    };
 
-        const token = response.data.token;
-
-        const user = response.data;
-
-        sessionStorage.setItem("user", JSON.stringify(user));
-        sessionStorage.setItem("token", token); 
-
+    try {
+      const response = await this.axios.post("usuarios/login", body);
+      console.log("response", response);
+      if (response.status === 200) {
+        // Salvar token e informações do usuário localmente
+        localStorage.setItem("access_token", response.data.access_token);
+        localStorage.setItem("usuario", JSON.stringify(response.data.usuario));
+        this.loggedIn = true;
         return response;
-      } catch (error) {
-        console.error(error);
+      } else {
+        return false;
       }
-    }
-
-    static logout() {
-      sessionStorage.removeItem("token");
-      sessionStorage.removeItem("user");
-    }
-
-    static isLoggedIn() {
-      return sessionStorage.getItem("token") !== null;
+    } catch (error) {
+      console.error("Error during login:", error);
+      return false;
     }
   }
 
-  export default LoginService;
+  logout() {
+    // Limpar token e informações do usuário localmente
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("usuario");
+    this.loggedIn = false;
+  }
+
+  isLoggedIn() {
+    // Verificar se o usuário está logado localmente
+    return this.loggedIn;
+  }
+}
+
+export default LoginService;

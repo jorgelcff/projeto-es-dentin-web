@@ -35,22 +35,17 @@ const defaultTheme = createTheme();
 
 export default function SignIn() {
   const handleSubmit = async (event) => {
-    const loginService = LoginService;
+    const loginService = new LoginService();
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-
     // Chamar o método de login passando email e password
     await loginService.login(data.get('email'), data.get('password')).then
     (
       (response) => {
-        console.log(response);
         if (response.status === 200) {
-          toast.success('Login efetuado com sucesso');
-          window.location.href = '/home';
+          toast.success('Login efetuado com sucesso').then(
+            window.location.href = '/home'
+          );
         }
       }
     ).catch

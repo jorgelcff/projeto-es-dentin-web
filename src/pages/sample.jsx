@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 export default () => (
   <Fragment>
     <ol className="breadcrumb">
-      <li className="breadcrumb-item active">
+      <li className="breadcrumb-item">
         <NavLink to="/home">Home</NavLink>
       </li>
-      <li className="breadcrumb-item active">Sample</li>
+      <li className="breadcrumb-item">Sample</li>
     </ol>
     <div>This is a sample page.</div>
   </Fragment>

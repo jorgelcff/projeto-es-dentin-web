@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import Layout from "./components/layout";
 import Routes from "./routes";
 import Login from "./pages/login";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 import store from "./store";
 
 import "./assets/styles/bootstrap.css";
@@ -16,22 +16,24 @@ class App extends Component {
   constructor() {
     super();
     this.state = {};
-
   }
 
-  userInSession = sessionStorage.getItem("user");
+  userInSession = localStorage.getItem("usuario");
 
   render() {
-    const userInSession = sessionStorage.getItem("token");
+    const userInSession = localStorage.getItem("access_token");
 
     return (
       <Provider store={store}>
-        <Toaster
-          position="top-right"
-        />
+        <Toaster position="top-right" />
         <BrowserRouter>
-          {userInSession ? <Layout><Routes /></Layout> : <Login />}
-          
+          {userInSession ? (
+            <Layout>
+              <Routes />
+            </Layout>
+          ) : (
+            <Login />
+          )}
         </BrowserRouter>
       </Provider>
     );
