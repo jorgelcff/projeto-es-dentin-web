@@ -29,6 +29,10 @@ export class DentistaService extends GenericService {
     return this.get(`dentistas/nome/${nome}`);
   }
 
+  async getConsultasByDentistasId(id) {
+    return this.get(`dentistas/${id}/consultas`);
+  }
+
   async getDentistasByEspecialidade(especialidade) {
     return this.get(`dentistas/especialidade/${especialidade}`);
   }

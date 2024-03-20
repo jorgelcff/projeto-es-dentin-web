@@ -1,9 +1,9 @@
 
 import axios from 'axios';
 
-class GenericService {
+export class GenericService {
   constructor() {
-    this.baseUrl = 'https://dentin.fly.dev/';
+    this.baseUrl = 'http://localhost:5500';
   }
 
   async get(endpoint, params) {

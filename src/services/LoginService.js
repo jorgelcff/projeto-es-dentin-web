@@ -4,9 +4,10 @@ class LoginService {
   constructor() {
     this.loggedIn = false;
     this.axios = axios.create({
-      baseURL: "https://dentin.fly.dev/",
+      baseURL: "http://localhost:5500/",
       headers: {
         "Content-Type": "application/json",
+        'mode': 'no-cors'
       },
     });
   }
@@ -23,10 +24,10 @@ class LoginService {
       console.log("response", response);
       if (response.status === 200) {
         // Salvar token e informações do usuário localmente
-        localStorage.setItem("token", response.data.access_token);
+        localStorage.setItem("access_token", response.data.access_token);
         localStorage.setItem("usuario", JSON.stringify(response.data.usuario));
         this.loggedIn = true;
-        return true;
+        return response;
       } else {
         return false;
       }
@@ -38,7 +39,7 @@ class LoginService {
 
   logout() {
     // Limpar token e informações do usuário localmente
-    localStorage.removeItem("token");
+    localStorage.removeItem("access_token");
     localStorage.removeItem("usuario");
     this.loggedIn = false;
   }

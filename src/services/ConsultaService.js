@@ -1,9 +1,9 @@
 import GenericService from "./GenericService";
 
-class ConsultaService extends GenericService {
+export class ConsultaService extends GenericService {
   constructor() {
     super();
-    this.uri += 'consulta';
+    this.uri += 'consultas';
   }
 
   async getAll() {

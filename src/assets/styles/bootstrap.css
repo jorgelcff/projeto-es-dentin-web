@@ -4779,10 +4779,12 @@ body {
    flex: 1 1 auto;
    min-height: 1px;
    padding: 1.25rem;
+   color: "#fff";
  }
  
  .card-title {
    margin-bottom: 0.75rem;
+   color: "#fff";
  }
  
  .card-subtitle {
@@ -4807,6 +4809,7 @@ body {
    margin-bottom: 0;
    background-color: #1DBEAB;
    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+   color: "#FFF"
  }
  
  .card-header:first-child {

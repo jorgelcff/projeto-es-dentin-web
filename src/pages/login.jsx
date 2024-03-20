@@ -49,8 +49,9 @@ export default function SignIn() {
       (response) => {
         console.log(response);
         if (response.status === 200) {
-          toast.success('Login efetuado com sucesso');
-          window.location.href = '/home';
+          toast.success('Login efetuado com sucesso').then(
+            window.location.href = '/home'
+          );
         }
       }
     ).catch
