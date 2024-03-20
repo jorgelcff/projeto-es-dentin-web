@@ -35,7 +35,7 @@ const defaultTheme = createTheme();
 
 export default function SignIn() {
   const handleSubmit = async (event) => {
-    const loginService = LoginService;
+    const loginService = new LoginService();
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({

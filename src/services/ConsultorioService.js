@@ -1,4 +1,3 @@
-import { Consultorio } from "../models/Consultorio";
 import { GenericService } from "./GenericService";
 
 export class ConsultorioService extends GenericService {

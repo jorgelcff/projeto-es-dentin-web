@@ -1,4 +1,3 @@
-import { Sala } from "../models/Sala";
 import { GenericService } from "./GenericService";
 
 export class SalaService extends GenericService {

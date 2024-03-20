@@ -1,4 +1,3 @@
-import { AceitaConv } from "../models/AceitaConv";
 import { GenericService } from "./GenericService";
 
 export class AceitaConvService extends GenericService {

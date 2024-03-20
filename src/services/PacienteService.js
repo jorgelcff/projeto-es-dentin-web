@@ -1,4 +1,3 @@
-import { Paciente } from "../models/Paciente";
 import { GenericService } from "./GenericService";
 
 export class PacienteService extends GenericService {

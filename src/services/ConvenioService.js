@@ -1,4 +1,3 @@
-import { Convenio } from "../models/Convenio";
 import { GenericService } from "./GenericService";
 
 export class ConvenioService extends GenericService {

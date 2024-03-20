@@ -1,4 +1,3 @@
-import { AtendeConsul } from "../models/AtendeConsul";
 import { GenericService } from "./GenericService";
 
 export class AtendeConsulService extends GenericService {

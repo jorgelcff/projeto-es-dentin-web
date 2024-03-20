@@ -1,4 +1,3 @@
-import { Dentista } from "../models/Dentista";
 import { GenericService } from "./GenericService";
 
 export class DentistaService extends GenericService {

@@ -1,4 +1,3 @@
-import { PagaConv } from "../models/PagaConv";
 import { GenericService } from "./GenericService";
 
 export class PagaConvService extends GenericService {

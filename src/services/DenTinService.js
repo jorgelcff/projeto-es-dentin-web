@@ -1,4 +1,3 @@
-import { DenTin } from "../models/DenTin";
 import { GenericService } from "./GenericService";
 
 export class DenTinService extends GenericService {
