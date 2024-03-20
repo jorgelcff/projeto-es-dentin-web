@@ -217,7 +217,6 @@ const ConsultasPage = () => {
       );
 
       setConsultas(response);
-      console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -258,8 +257,6 @@ const ConsultasPage = () => {
       <Grid container spacing={4} flexWrap={"wrap"}>
         {consultas &&
           consultas.map((consulta) => {
-            console.log("consulta", consulta);
-
             return (
               <ConsultaCard
                 key={consulta.pkConsulta} // Add a unique key prop
